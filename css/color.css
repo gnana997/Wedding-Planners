@@ -1,0 +1,127 @@
+/*//////////////////////////////////////////////////////////////////////////////////////////*/
+/* COLOR CSS 1*/
+/*//////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+/* Primary */
+
+a,
+.color_primary,
+.breadcrumb > li > a:hover,
+h5, h6,
+.rtd ol li:before,
+.ui-btn_mod-d,
+.text-primary,
+.ui-blockquote,
+.footer-contacts,
+.advantages__item .icon,
+.accordion .panel-title__number,
+.list_mod-b > li,
+.list_mod-b > li > a,
+.raiting,
+.owl-theme .owl-controls .owl-buttons div,
+.total-price,
+.pizza-builder__radio:checked + .pizza-builder__radio-label,
+.pizza-builder__check-price,
+.cart__radio:checked + .cart__radio-label,
+.enumerator__input,
+.table-order__total,
+.table-totals__total,
+.filter__btn,
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus,
+.comments-list .comment-datetime,
+.cart__price,
+.table-cart-order__price {color: #D94F2B;}
+
+
+.bg-color_second,
+.rtd ul > li:before,
+.btn-primary,
+.ui-btn:after,
+.btn:after,
+.section-bg_mod-c,
+.pizza-builder__item .icon-check,
+.forms__label-check:after,
+.forms__label-radio:after,
+.border-effect__top,
+.border-effect__right,
+.border-effect__bottom,
+.border-effect__left {background-color: #D94F2B;}
+
+.btn-primary,
+.ui-btn_mod-d,
+blockquote,
+.pagination,
+.pagination > li:first-child,
+.pagination > li:last-child,
+.accordion .panel-img img,
+.list-progress__item,
+.decor-top-line:before,
+.decor-top-line:after,
+.slider-reviews__inner,
+.decor-top-line__inner,
+.owl-theme .owl-controls .owl-buttons div,
+.post .entry-media img,
+.slider_mod-c.owl-theme .owl-controls .owl-buttons,
+.pizza-builder__radio:checked + .pizza-builder__radio-label > .pizza-builder__radio-number,
+.cart__radio:checked + .cart__radio-label > .cart__radio-number,
+.forms__check:checked + .forms__label-check:before,
+.forms__check:checked + .forms__label-radio:before,
+.pager,
+.pager li > a .icon,
+.pager li > span .icon,
+.map {border-color: #D94F2B;}
+
+.table > thead > tr > th,
+.filter,
+.cart__link-wrap,
+.nav-tabs,
+.checkout-top-line,
+.pager .previous {border-bottom-color: #D94F2B;}
+
+.bootstrap-select .dropdown-toggle:focus {outline-color: #D94F2B;}
+
+
+
+/* Secondary */
+
+.color_second,
+.breadcrumb > li + li:before,
+.breadcrumb > li > a,
+.breadcrumb > .active,
+.ui-title-block,
+h2, h3, h4,
+.ui-btn_mod-a,
+.ui-btn_mod-c,
+.ui-title-inner,
+.accordion .panel .icon:hover,
+.slider-reviews__title,
+.pizza-builder__check-name,
+.comments-list .comment-author,
+.table-cart-order__name {color: #fdbc2c;}
+
+
+.bg-color_primary,
+.header-basket,
+.btn-warning,
+.ui-btn-primary,
+.section-subscribe,
+.btn-primary:after,
+.btn-danger:after,
+.post .post-tags__link:hover {background-color: #fdbc2c;}
+
+.breadcrumb,
+.breadcrumb:before,
+.breadcrumb:after,
+.btn-warning,
+.ui-btn-primary,
+.ui-btn_mod-a,
+.pizza-builder__item_mod-a:hover,
+.pizza-builder__item_mod-a:focus,
+.pizza-builder__item_mod-b:hover,
+.pizza-builder__item_mod-b:focus,
+.ui-select:hover {border-color: #fdbc2c;}
+

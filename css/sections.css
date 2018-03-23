@@ -1,0 +1,131 @@
+.section-area {
+	position: relative;
+}
+.section-default {
+	position: relative;
+	padding-top: 150px;
+	padding-bottom: 150px;
+}
+
+.section-title {
+	padding-top: 104px;
+	padding-bottom: 96px;
+	background: url('../media/bg/bg-title.jpg') no-repeat 50% 0;
+	background-size: cover;
+	box-shadow: 0 1px 7px 0 rgba(1, 2, 2, 0.6);
+	text-align: center;
+}
+
+.section-bg {
+	position: relative;
+}
+.section-bg:after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	content: '';
+}
+
+.section-bg_mod-a {
+	background: url('../media/bg/bg-1.jpg') no-repeat 50% 0;
+	background-size: cover;
+}
+.section-bg_mod-a:after {
+	background-color: rgba(0, 0, 0, 0.25);
+}
+.section-bg_mod-b {
+	background: url('../media/bg/bg-2.jpg') no-repeat 50% 0;
+	background-size: cover;
+}
+.section-bg_mod-b:after {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+.section-bg_mod-c {
+	background: url('../media/bg/pattern-2.png');
+}
+.section-bg_mod-d:after {
+	background-color: rgba(0, 0, 0, 0.25);
+}
+
+.section__inner {
+	position: relative;
+	z-index: 10;
+}
+
+.section-subscribe {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	background-image: url('../media/bg/pattern-1.png');
+}
+
+.section-reply-form {
+	margin-top: 5px;
+	padding: 20px 35px;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+.section-reply-form .ui-title-inner {
+	margin-bottom: 6px;
+}
+.section-contact {
+	padding: 18px 25px 0 35px;
+	background-color: rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+}
+
+.section-carusel {
+	padding-bottom: 193px;
+}
+
+.section-table-order {
+	padding: 20px 30px 25px 35px;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.section-table-order_mod-a {
+	padding-right: 25px;
+}
+
+.section-list-cart .ui-title-inner {
+	margin-bottom: 0;
+}
+
+.section-catalog {
+	padding-top: 72px;
+}
+
+.section_mod-a {
+	padding-top: 133px;
+	padding-bottom: 150px;
+}
+
+.section_mod-b {
+	margin-bottom: 150px;
+	padding-top: 90px;
+}
+
+.section_mod-c {
+	padding-top: 55px;
+	padding-bottom: 120px;
+}
+
+.section_mod-d {
+	padding-top: 65px;
+	padding-bottom: 50px;
+}
+
+.section_mod-f {
+	padding-top: 50px;
+	padding-bottom: 95px;
+}
+.section_mod-g {
+	padding-top: 20px;
+}
+.section_mod-h {
+	padding-bottom: 30px;
+}
+
+.section_mod-j {
+	padding-top: 130px;
+}

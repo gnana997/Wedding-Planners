@@ -1,0 +1,22 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+- Global
+- Elements
+
+-------------------------------------------------------------------*/
+
+
+/*01 Global */
+
+/* Elements */
+
+.list-tags {
+	padding-left: 0;
+	list-style-type: none;
+}
+.list-tags__item {
+	display: inline-block;
+	margin-right: 3px;
+	margin-bottom: 6px;
+}

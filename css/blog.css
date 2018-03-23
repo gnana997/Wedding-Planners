@@ -1,0 +1,216 @@
+/*------------------------------------------------------------------
+[Table of contents]
+- Blog
+- Comments
+- Blog form
+- Other
+-------------------------------------------------------------------*/
+
+
+/*01  Blog */
+
+.post {
+	margin-top: 50px;
+}
+.post .entry-media {
+	margin-bottom: 26px;
+}
+.post .entry-media img {
+	transition: all 0.3s;
+}
+.post .entry-media img:hover {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+.post .entry-media img {
+	padding: 20px;
+	border-width: 4px;
+	border-style: solid;
+}
+.post .entry-title {
+	margin-bottom: 25px;
+	line-height: 1.11;
+}
+.post .entry-meta {
+	margin-bottom: 20px;
+	font-weight: 700;
+}
+.post .entry-meta cite {
+	font-style: normal;
+}
+.post .entry-content p {
+	line-height: 1.7;
+}
+.post .ui-btn {
+	margin-top: 5px;
+	padding-right: 28px;
+	padding-left: 28px;
+}
+.post .post-tags {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+.post .post-tags__link {
+	padding: 8px 17px;
+	font-size: 14px;
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.3);
+	text-transform: uppercase;
+}
+.post .post-tags__link:hover {
+	transition: all 0.3s;
+	text-decoration: none;
+}
+.post .entry-footer__inner {
+	float: right;
+	font-size: 14px;
+}
+.post .entry-footer__inner .icon {
+	margin-right: 5px;
+}
+.post .entry-footer__title {
+	font-weight: 700;
+}
+
+.post_first {
+	margin-top: 100px;
+	padding-bottom: 65px;
+	border-bottom: 1px solid #383838;
+	box-shadow: 0 1px 0 0 #010202;
+}
+.post_first .entry-media {
+	margin-bottom: 50px;
+}
+.post_first .entry-title {
+	margin-top: 33px;
+	margin-bottom: 29px;
+	line-height: 1.2;
+}
+.post_first .entry-content {
+	margin-bottom: 16px;
+}
+
+.post_mod-b {
+	margin-top: 85px;
+	padding-bottom: 65px;
+	border-bottom: 1px solid #383838;
+	box-shadow: 0 1px 0 0 #010202;
+}
+.post_mod-b .entry-title {
+	margin-bottom: 20px;
+}
+.post_mod-b .entry-meta {
+	margin-top: 45px;
+	margin-bottom: 27px;
+}
+.post_mod-b .ui-btn {
+	margin-top: 17px;
+}
+.post_mod-b:nth-child(odd) .entry-meta {
+	margin-top: 64px;
+}
+.post_mod-b:nth-child(odd) .entry-title {
+	margin-bottom: 28px;
+}
+.post_mod-b:last-child {
+	padding-bottom: 20px;
+	border-bottom: none;
+	box-shadow: none;
+}
+
+.post_main {
+	margin-top: 100px;
+	margin-bottom: 50px;
+	border-bottom: 1px solid #383838;
+	box-shadow: 0 1px 0 0 #010202;
+}
+.post_main .entry-title {
+	max-width: 1050px;
+	margin-top: 38px;
+	margin-bottom: 50px;
+	line-height: 1.2;
+}
+.post_main .entry-meta {
+	margin-top: 55px;
+	text-align: center;
+}
+.post_main .entry-content {
+	margin-bottom: 70px;
+}
+
+
+/*02  Comments */
+
+.section-comment {
+	margin-bottom: 77px;
+	padding-top: 20px;
+}
+.section-comment__title {
+	margin-bottom: 53px;
+}
+.comments-list,
+.comments-list .children {
+	padding-left: 0;
+	list-style-type: none;
+}
+.comments-list .children {
+	margin-left: 100px;
+}
+.comments-list .comment-author {
+	display: block;
+	margin-bottom: 6px;
+	font: normal 24px 'Abril Fatface';
+}
+.comments-list .comment-datetime {
+	display: block;
+	margin-bottom: 20px;
+	font-size: 16px;
+	font-weight: 700;
+}
+.comments-list .comment-body p {
+	margin-top: 20px;
+}
+.comments-list .comment-btn {
+	padding: 4px 20px;
+}
+.comment {
+	position: relative;
+	margin-bottom: 29px;
+}
+.comment .raiting {
+	position: absolute;
+	top: 5px;
+	right: 0;
+}
+
+
+
+/*03  Blog form */
+
+.comment-reply-form__btn {
+	margin-top: 15px;
+}
+.raiting__radio-label {
+	display: inline-block;
+	margin-right: 12px;
+	cursor: pointer;
+}
+.raiting-form {
+	margin-bottom: 2px;
+}
+.raiting-form__item:before {
+	font: normal normal normal 12px/1 FontAwesome;
+	content: '\f006';
+}
+.raiting__radio:checked + .raiting__radio-label .raiting-form__item:before {
+	content: '\f005';
+}
+.raiting-form__item {
+	display: inline-block;
+}
+
+
+/*04 Other */
+
+.pager_post {
+	margin-bottom: 150px;
+}

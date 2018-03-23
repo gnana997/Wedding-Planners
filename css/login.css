@@ -1,0 +1,78 @@
+body{
+    background: url(../images/footer.jpg) no-repeat 0px 0px;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-attachment: fixed;
+	padding:5em 0;
+}
+
+.footer h2 {
+    text-align: center;
+}
+.footer h2 a{
+	text-decoration: none;
+    padding: 0 0 0 1.2em;
+    font-weight: 600;
+    font-size: 1.5em;
+    letter-spacing: 8px;
+    color: #fff;
+    display: block;
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+}
+
+.footer form{
+	width: 60%;
+    margin: 0 auto;
+    padding: 2em;
+    background:rgba(7, 7, 7, 0.44);
+    align-content: center;
+    text-align: center;
+}
+.footer input[type="email"],[type="password"],[type="text"] {
+    outline: none;
+    padding: 15px;
+    font-size: 1em;
+    color: #999;
+    width: 84.1%;
+    background: #fff;
+    border: 2px;
+    font-weight: 600;
+    margin: 5px;
+    border-radius: 5px;
+}
+.footer input[type="submit"] {
+    outline: none;
+    width: 15%;
+    background: center #cf2d50;
+    text-transform: uppercase;
+    border: none;
+    padding: 15px 0;
+    margin:5px;
+    color: #fff;
+    border-radius: 5px;
+}
+.footer input[type="submit"]:hover{
+	background-color:#212121;
+}
+
+.footer a button{
+    color: #fff;
+    outline: none;
+    width: 15%;
+    background: center #cf2d50;
+    text-transform: uppercase;
+    border: none;
+    padding: 15px 0;
+    margin:5px;
+    border-radius: 5px;
+}
+
+.footer a button:hover{
+    background-color:#212121;
+}
+
+

@@ -1,0 +1,1774 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+ - Global
+ - Typography
+ - Basic Elements
+ - Header
+ - Navigation
+ - Footer
+ - Components
+ - Sliders
+
+
+-------------------------------------------------------------------*/
+
+
+/* ======= GLOBAL ======= */
+
+body {
+	background: #333 url('../media/bg/pattern-body.jpg');
+}
+
+body p {
+	margin-bottom: 30px;
+	line-height: 1.66;
+}
+
+select:focus {
+	outline-style: none;
+}
+
+img.pull-right {
+	padding-left: 20px;
+}
+img.pull-left {
+	padding-right: 20px;
+}
+
+#wrapper {
+	max-width: 1920px;
+	margin: auto;
+}
+
+.br {
+	display: block;
+}
+
+.no-br {
+	white-space: nowrap;
+}
+
+.helper,
+.helper:before {
+	display: inline-block;
+	vertical-align: middle;
+}
+.helper:before {
+	width: 0;
+	height: 100%;
+	content: '';
+}
+.helper-2 {
+	display: inline-block;
+	width: 0;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.blocks-inline {
+	padding-left: 0;
+	list-style-type: none;
+}
+.blocks-inline > li {
+	display: inline-block;
+	margin-right: -3px;
+	vertical-align: top;
+}
+
+.table-container {
+	width: 100%;
+	overflow-y: auto;
+
+	_overflow: auto;
+}
+.table-container::-webkit-scrollbar {
+	width: 14px;
+	height: 14px;
+
+	-webkit-appearance: none;
+}
+.table-container::-webkit-scrollbar-thumb {
+	border: 3px solid #fff;
+	border-radius: 8px;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+/* ======= TYPOGRAPHY ======= */
+
+.rtd ul,
+.rtd ol {
+	margin-top: 17px;
+	margin-bottom: 17px;
+	padding-left: 0;
+	list-style-type: none;
+}
+
+.rtd ol {
+	margin-left: 30px;
+	counter-reset: list;
+}
+.rtd ol li {
+	margin-bottom: 2px;
+	text-indent: -16px;
+}
+.rtd ol li:before {
+	display: inline-block;
+	width: 15px;
+	font-weight: 700;
+	content: counter(list) '. ';
+	counter-increment: list;
+}
+
+.rtd ul > li {
+	position: relative;
+	margin-bottom: 1px;
+	font-weight: 700;
+}
+.rtd ul > li:before {
+	display: inline-block;
+	width: 6px;
+	height: 6px;
+	margin-right: 12px;
+	vertical-align: middle;
+	content: '';
+}
+.rtd h3 + ul,
+.rtd h3 + ol {
+	margin-top: 45px;
+}
+.rtd img {
+	margin-bottom: 20px;
+}
+
+.list_mod-a {
+	margin-left: 44px;
+}
+.list_mod-a > li:before {
+	border-radius: 50%;
+}
+
+.rtd .list-parag > li {
+	margin-bottom: 18px;
+	line-height: 1.7;
+}
+
+h3.h3-inner {
+	margin-top: 10px;
+}
+.ui-title-page {
+	margin-bottom: 17px;
+	font-family: 'Fredericka the Great';
+	font-size: 72px;
+	color: #fff;
+}
+.ui-title-block {
+	margin-top: 0;
+	margin-bottom: 32px;
+	font: 400 48px/1.25 'Abril Fatface';
+	text-align: center;
+}
+.ui-title-block_mod-a {
+	color: #000 !important;
+}
+.ui-title-block + .ui-subtitle-block {
+	margin-top: 47px;
+}
+.ui-subtitle-block {
+	text-align: center;
+}
+.ui-title-inner {
+	margin-top: 0;
+	font: 36px 'Abril Fatface';
+}
+.ui-title-inner__small {
+	font-size: 24px;
+}
+.ui-title-inner_mod-a {
+	margin-top: 17px;
+	margin-bottom: 27px;
+}
+.ui-title-inner_mod-b {
+	margin-top: 80px;
+	margin-bottom: 34px;
+}
+.ui-title-inner_mod-c {
+	margin-bottom: 10px;
+}
+
+.ui-btn {
+	display: inline-block;
+	margin-bottom: 14px;
+	padding: 10px 39px;
+	font-size: 14px;
+	font-weight: 700;
+	border-width: 2px;
+	border-style: solid;
+	transition: all 0.3s;
+	text-transform: uppercase;
+}
+.ui-btn:hover {
+	color: inherit;
+	text-decoration: none;
+}
+.ui-btn-primary {
+	color: #000;
+}
+
+.ui-btn_mod-b {
+	font-weight: 400;
+	color: #fff;
+	border-width: 1px;
+}
+.ui-btn_mod-c {
+	border-color: #000;
+	background-color: #000;
+}
+.ui-btn_mod-d {
+	padding-top: 8px;
+	padding-bottom: 9px;
+	font-size: 18px;
+	border-width: 4px;
+}
+.ui-btn_with_icon {
+	padding-right: 30px;
+	padding-left: 30px;
+}
+.ui-btn_with_icon .icon {
+	margin-right: 10px;
+	font-size: 18px;
+}
+.group-btn-ui {
+	margin-top: 20px;
+}
+.group-btn-ui .ui-btn:last-child {
+	margin-bottom: 0;
+}
+
+.ui-form {
+	padding-top: 22px;
+}
+.ui-select {
+	width: 100%;
+	margin-bottom: 0;
+	padding-top: 3px;
+	padding-bottom: 5px;
+	font-size: 16px;
+	vertical-align: top;
+	border: 1px solid #fff;
+	border-radius: 0;
+	background-color: transparent;
+	text-transform: inherit;
+}
+.ui-select__icon:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: '\f107';
+}
+.ui-select_mod-a {
+	margin-bottom: 15px;
+	padding-top: 11px;
+	padding-bottom: 11px;
+	font-size: 14px;;
+}
+.ui-form-label {
+	display: block;
+	padding-top: 9px;
+	padding-bottom: 7px;
+	font-size: 14px;
+	font-weight: 700;
+}
+.form-control_second {
+	margin-bottom: 10px;
+}
+
+.ui-blockquote {
+	max-width: 830px;
+	margin: 55px auto;
+	border-width: 4px;
+	border-style: solid;
+	text-align: center;
+}
+
+.border-bottom {
+	border-bottom: 1px solid #383838;
+	box-shadow: 0 0 2px 0 #010202;
+}
+
+.btn-effect {
+	position: relative;
+	margin-right: 1px;
+	overflow: hidden;
+	z-index: 1;
+}
+.btn-effect:after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 120%;
+	height: 50%;
+	opacity: 0;
+	z-index: -1;
+	content: '';
+	transition: all 0.5s ease 0.2s;
+	transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+.btn-effect:hover:after {
+	height: 580%;
+	opacity: 1;
+}
+
+.decor-1 {
+	background: url('../media/decor/decor-1.png') no-repeat 50% 0;
+}
+.decor-2 {
+	height: 50px;
+	padding-top: 9px;
+	font: 24px 'Fredericka the Great';
+	background: url('../media/decor/decor-2.png') no-repeat 50% 0;
+}
+
+.section-typografy {
+	padding-top: 50px;
+	padding-bottom: 45px;
+}
+.section-typografy_mod-a {
+	padding-bottom: 25px;
+}
+
+.typografy-subtitle {
+	margin-top: 0;
+	font-family: 'Josefin Sans';
+	font-size: 24px;
+	font-weight: 700;
+	color: #333;
+}
+.typografy-table {
+	margin-bottom: 55px;
+}
+.section-typografy .pagination {
+	margin-bottom: 0;
+}
+.section-typografy h1,
+.section-typografy h2,
+.section-typografy h3,
+.section-typografy h4,
+.section-typografy h5,
+.section-typografy h6 {
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+.forms__label {
+	position: relative;
+	display: inline-block;
+	margin-bottom: 11px;
+	padding-left: 45px;
+	cursor: pointer;
+}
+.forms__label:last-child {
+	margin-right: 0;
+}
+.forms__label-check:before,
+.forms__label-radio:before {
+	position: absolute;
+	left: 0;
+	border: 1px solid #fff;
+	content: '';
+}
+.forms__label-check:after,
+.forms__label-radio:after {
+	position: absolute;
+	display: none;
+	content: '';
+}
+.forms__label-check {
+	display: block;
+	margin-top: 0;
+	margin-right: 12px;
+	margin-bottom: 11px;
+}
+.forms__label-check:before {
+	top: 3px;
+	width: 19px;
+	height: 19px;
+}
+.forms__label-check:after {
+	top: 9px;
+	left: 6px;
+	width: 6px;
+	height: 6px;
+}
+.forms__label-check_mod-a {
+	margin-top: 15px;
+	margin-bottom: 25px;
+}
+.forms__label-radio {
+	margin-right: 19px;
+}
+.forms__label-radio:before {
+	top: 2px;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+}
+.forms__label-radio:after {
+	top: 8px;
+	left: 6px;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+}
+.forms__check {
+	position: absolute;
+	display: block;
+	width: 0;
+	height: 0;
+	opacity: 0;
+}
+.forms__check:checked + .forms__label-check:after,
+.forms__check:checked + .forms__label-radio:after {
+	display: block;
+}
+
+
+.border-effect {
+	position: relative;
+	padding: 20px;
+	overflow: hidden;
+}
+.border-effect__mark {
+	color: #ffffff;
+}
+.border-effect__top,
+.border-effect__right,
+.border-effect__bottom,
+.border-effect__left {
+	position: absolute;
+	transition: all 300ms;
+}
+.border-effect__top,
+.border-effect__bottom {
+	width: 100%;
+	height: 3px;
+}
+.border-effect__left,
+.border-effect__right {
+	width: 3px;
+	height: 100%;
+}
+.border-effect__top {
+	top: 0;
+	left: -100%;
+}
+.border-effect__right {
+	right: 0;
+	top: -100%;
+}
+.border-effect__bottom {
+	bottom: 0;
+	right: -100%;
+}
+.border-effect__left {
+	left: 0;
+	bottom: -100%;
+}
+
+.border-effect__mark.advantages__item .icon {
+	color: #FFF;
+}
+
+
+
+/* ======= HEADER ======= */
+
+.header {
+	position: relative;
+	height: 90px;
+	background-color: #151515;
+	text-align: center;
+}
+.header .logo {
+	display: inline-block;
+	padding-top: 22px;
+}
+.header-basket {
+	float: right;
+	width: 90px;
+	height: 100%;
+	cursor: pointer;
+}
+.header-basket .icon {
+	display: block;
+	padding-top: 26px;
+	font-size: 40px;
+	color: #fefefe;
+}
+.header-basket__number {
+	position: absolute;
+	top: 29px;
+	right: 22px;
+	display: block;
+	width: 18px;
+	height: 18px;
+	font: 700 12px 'Josefin Sans';
+	color: #151515;
+	border-radius: 50%;
+	background-color: #fff;
+}
+.header__wrap {
+	height: 90px;
+	width: 100%;
+}
+.header.sticky .header__wrap {
+	left: 0;
+	position: fixed;
+	top: 0;
+	margin-top: 0;
+	z-index: 1000;
+	text-align: center;
+	box-shadow: 0 0px 6px 0px #333;
+	transition: all .3s;
+	opacity: .7;
+	background-color: #000;
+}
+.header.sticky .header__wrap:hover {
+	opacity: 1;
+}
+
+
+
+/* ======= NAVIGATION ======= */
+
+.form-search {
+	position: relative;
+	border: 1px solid #383838;
+	box-shadow: 0 1px 2px 0 #010202;
+}
+.form-search__input {
+	width: 100%;
+	padding: 14px 35px 12px 30px;
+	font-size: 14px;
+	line-height: 1;
+	border: none;
+	background-color: transparent;
+}
+.form-search__input::-moz-placeholder {
+	color: #fff;
+}
+.form-search__input::-webkit-input-placeholder {
+	color: #fff;
+}
+.form-search__btn {
+	position: absolute;
+	top: 5px;
+	right: 13px;
+	border: none;
+	background-color: transparent;
+}
+.form-search__btn .icon {
+	font-size: 14px;
+}
+
+.main-nav {
+	margin-top: 35px;
+	margin-bottom: 40px;
+}
+
+.navig-menu__item {
+	margin-bottom: 23px;
+}
+.navig-menu__link {
+	font-weight: 700;
+	color: #fefefe;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+.navig-menu__link:hover {
+	font-weight: 700;
+	text-decoration: none;
+}
+.link-account {
+	display: block;
+	margin-top: 41px;
+	font-size: 14px;
+	font-weight: 700;
+	color: #fefefe;
+	text-transform: uppercase;
+}
+.link-account + .link-account {
+	margin-top: 28px;
+}
+
+
+
+/* ======= FOOTER ======= */
+
+.footer {
+	text-align: center;
+}
+.footer-contacts {
+	padding-top: 112px;
+	font-family: 'Fredericka the Great';
+	font-size: 48px;
+	line-height: 1;
+}
+.footer-contacts__number {
+	display: block;
+	margin-bottom: 0;
+	font-size: 72px;
+}
+.footer-decor {
+	margin-top: 91px;
+}
+.footer-list {
+	margin-top: 35px;
+	margin-bottom: 52px;
+}
+.footer-list__link {
+	padding: 0 26px;
+	font: 26px 'Fredericka the Great';
+	color: #fff;
+}
+.footer-list__link:hover {
+	text-decoration: none;
+}
+
+.copyright {
+	padding-top: 35px;
+	padding-bottom: 35px;
+	font-size: 14px;
+	color: #757575;
+	background-color: #000;
+}
+.copyright__link {
+	color: #757575;
+}
+
+
+
+/* ======= COMPONENTS ======= */
+
+.accordion {
+	margin-bottom: 0;
+	border-top: 1px solid #383838;
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+					box-shadow: inset 0 1px 0 0 rgba(1, 2, 2, 0.55);
+}
+.accordion .panel-heading {
+	position: relative;
+	padding-right: 100px;
+}
+.accordion .panel-heading .btn-collapse {
+	position: absolute;
+	top: 30px;
+	right: 0;
+	bottom: 0;
+	display: block;
+}
+.accordion .panel-heading .icon {
+	float: right;
+	width: 70px;
+	height: 70px;
+	font: normal normal 60px/1 'Fredericka the Great';
+	color: #fffefe;
+	border-radius: 50%;
+	background: url('../media/decor/decor-1_mod-a.png') no-repeat 50% 0;
+	transition: all 0.3s;
+	text-align: center;
+}
+.accordion .panel-heading .icon_small {
+	display: block;
+	width: 60px;
+	height: 60px;
+	padding-top: 3px;
+	font-size: 48px;
+	background-size: cover;
+}
+.accordion .panel-heading .icon:hover {
+	font-weight: 700;
+}
+.accordion .panel-heading .collapsed .btn-collapse {
+	background-color: transparent;
+}
+.accordion .btn-collapse .icon:before {
+	content: '-';
+}
+.accordion .btn-collapse.collapsed .icon:before {
+	content: '+';
+}
+
+.accordion .panel-title__number {
+	display: inline-block;
+	margin-right: 55px;
+	font: 72px/1 'Fredericka the Great';
+	vertical-align: middle;
+}
+.accordion .panel-img {
+	margin-bottom: 15px;
+}
+.accordion .panel-img img {
+	margin: 0 auto;
+}
+.accordion .panel-body ul {
+	margin-top: 30px;
+}
+
+.btn-accordion-builder {
+	margin-top: 63px;
+	margin-bottom: 0;
+}
+.accordion_mod-a {
+	margin-top: 75px;
+}
+.accordion_mod-a .panel {
+	padding-bottom: 0;
+}
+.accordion_mod-b {
+	margin-top: 65px;
+}
+
+.list-progress {
+	margin-right: -20px;
+	margin-left: -53px;
+	padding-top: 152px;
+	padding-bottom: 67px;
+	text-align: center;
+}
+.list-progress__item {
+	display: inline-block;
+	width: 158px;
+	height: 158px;
+	margin-right: 20px;
+	margin-bottom: 40px;
+	margin-left: 19px;
+	border-width: 4px;
+	border-style: solid;
+	border-radius: 50%;
+	text-align: center;
+}
+.list-progress__percent {
+	display: block;
+	margin-top: 26px;
+	font: 72px/1 'Fredericka the Great';
+}
+.list-progress__name {
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.form-subscribe {
+	text-align: center;
+}
+.form-subscribe__title-group {
+	letter-spacing: -0.015em;
+}
+.form-subscribe__title {
+	margin-bottom: 27px;
+	font-size: 36px;
+	letter-spacing: -0.01em;
+}
+.form-subscribe .form-control {
+	display: inline-block;
+	width: 294px;
+	margin-right: 3px;
+	margin-left: 3px;
+	border-color: #000;
+	vertical-align: top;
+}
+.form-subscribe .ui-btn {
+	display: inline-block;
+	padding: 10px 26px;
+}
+.form-subscribe input::-webkit-input-placeholder {
+	color: #000;
+	line-height: 1.7;
+}
+.form-subscribe input::-moz-placeholder {
+	color: #000;
+	line-height: 1.7;
+}
+
+.form-payment {
+	margin-top: 25px;
+}
+
+.form-payment__radio-label {
+	display: block;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 32px;
+}
+.form-payment__radio-label:before {
+	top: 3px;
+}
+.form-payment__radio-label:after {
+	top: 9px;
+}
+.form-payment__item-title {
+	display: block;
+	margin-bottom: 12px;
+}
+
+.form-payment__check-label {
+	margin-top: 45px;
+	padding-left: 38px;
+}
+.form-payment__description {
+	display: block;
+	margin-bottom: 12px;
+	font-size: 14px;
+}
+.form-payment__img {
+	display: inline-block;
+	max-width: 130px;
+	margin-right: 15px;
+	vertical-align: middle;
+}
+.form-payment__link {
+	font-size: 14px;
+}
+.form-payment__link-2 {
+	display: block;
+	font-weight: 700;
+}
+.form-payment__btn {
+	display: block;
+	text-align: center;
+}
+
+.advantages__item {
+	margin-top: 33px;
+	margin-bottom: 20px;
+}
+.advantages__item .icon {
+	display: block;
+	margin-bottom: 19px;
+	font-size: 72px;;
+}
+.advantages__title {
+	margin-bottom: 0;
+}
+.advantages__description {
+	margin-top: 25px;
+	line-height: 1.7;
+}
+
+.decor-top-line {
+	position: relative;
+	top: -26px;
+	height: 30px;
+	overflow: hidden;
+}
+.decor-top-line:before,
+.decor-top-line:after {
+	position: absolute;
+	bottom: 0;
+	width: 157px;
+	border-top-width: 4px;
+	border-top-style: solid;
+	content: '';
+}
+.decor-top-line:before {
+	left: 0;
+	display: inline-block;
+}
+.decor-top-line:after {
+	right: 0;
+}
+.decor-top-line__inner {
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	display: block;
+	width: 35px;
+	height: 35px;
+	margin-left: -18px;
+	border-width: 4px;
+	border-style: solid;
+	transform: rotate(45deg) skewX(-5deg) skewY(-5deg);
+}
+
+.raiting__item {
+	display: inline-block;
+	font-size: 14px;
+}
+
+.list-cart {
+	margin-top: 25px;
+	border-top: 1px solid #010202;
+	box-shadow: 0 -1px 0 0 #383838;
+}
+.list-cart__item {
+	padding: 19px 0 23px 0;
+	font-size: 14px;
+	border-bottom: 1px solid #383838;
+	box-shadow: 0 1px 0 0 #010202;
+	overflow: hidden;
+}
+.list-cart__item > .icon {
+	position: absolute;
+	top: 50%;
+	left: 2px;
+	margin-top: -12px;
+	font-size: 18px;
+	z-index: 10;
+	cursor: pointer;
+}
+.list-cart__img {
+	display: inline-block;
+	vertical-align: top;
+}
+.list-cart__img img {
+	display: inline-block;
+	margin-left: 25px;
+}
+.list-cart__inner {
+	display: inline-block;
+	width: 130px;
+	margin-left: 10px;
+	vertical-align: middle;
+}
+.list-cart__title {
+	margin-top: 0;
+	margin-bottom: 6px;
+	font-size: 24px;
+}
+.list-cart__size_name {
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.list-cart__price {
+	margin-top: 12px;
+}
+.list-cart__icon {
+	cursor: pointer;
+}
+
+.total-price {
+	margin-top: 25px;
+	margin-bottom: 30px;
+	font: 24px 'Fredericka the Great';
+}
+.total-price__number {
+	float: right;
+}
+.total-price__btn {
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: center;
+}
+
+.block-a .ui-title-block {
+	margin-top: 60px;
+	margin-bottom: 40px;
+	text-align: left;
+}
+.block-a .ui-title-inner {
+	margin-top: 38px;
+	margin-bottom: 26px;
+}
+.block-a .list_mod-b {
+	margin-bottom: 40px;
+	margin-top: 25px;
+}
+.block-a .list_mod-b li {
+	margin-bottom: 5px;
+}
+.block-a .ui-btn {
+	margin-right: 6px;
+}
+
+.filter {
+	padding-top: 41px;
+	padding-bottom: 15px;
+	font-size: 14px;
+	border-bottom-width: 4px;
+	border-bottom-style: solid;
+	box-shadow: inset 0 -1px 0 0 rgba(1, 2, 2, 0.6);
+}
+.filter__btn {
+	font-weight: 700;
+	cursor: pointer;
+	text-transform: uppercase;
+}
+.filter__btn.collapsed {
+	color: #fff;
+}
+.filter__btn .icon {
+	margin-right: 10px;
+}
+.filter__info {
+	margin-left: 20px;
+}
+.filter__select {
+	display: inline-block;
+	float: right !important;
+	padding-top: 0;
+	font-size: 14px;
+	border: none;
+	background-color: transparent;
+}
+.filter__wrap-select {
+	float: right;
+}
+
+.filter-categories {
+	padding-top: 7px;
+	padding-bottom: 30px;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+.filter-categories__section_first_col {
+	padding-left: 40px;
+}
+.filter-categories__title {
+	margin-top: 27px;
+	margin-bottom: 21px;
+	font: 700 18px 'Josefin Sans';
+	color: #fff;
+	text-transform: uppercase;
+}
+.filter-categories__radio-label {
+	display: block;
+}
+.filter-categories__btn {
+	margin-top: 35px;
+	padding-right: 55px;
+	padding-left: 55px;
+}
+
+.cart {
+	padding-top: 70px;
+}
+.cart__link-wrap {
+	padding-top: 40px;
+	padding-bottom: 35px;
+	font-size: 14px;
+	font-weight: 700;
+	border-bottom-width: 4px;
+	border-bottom-style: solid;
+	text-transform: uppercase;
+}
+.cart__link-prev {
+	color: #fff;
+}
+.cart__link-prev:hover {
+	text-decoration: none;
+}
+.cart__link-prev .icon {
+	margin-right: 10px;
+}
+.cart__title {
+	margin-bottom: 8px;
+	text-align: left;
+}
+.cart__description {
+	margin-top: 30px;
+	line-height: 1.7;
+}
+.cart__price {
+	margin-top: 30px;
+	font: 36px 'Fredericka the Great';
+}
+.cart__title-inner {
+	margin-top: 32px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.cart__enumerator {
+	display: inline-block;
+	margin-right: 10px;
+}
+.cart__enumerator-input {
+	width: 44px;
+	height: 44px;
+	margin-right: -6px;
+	margin-left: -5px;
+	vertical-align: bottom;
+	border: 1px solid #fff;
+	background-color: transparent;
+	text-align: center;
+}
+.cart__enumerator-btn {
+	display: inline-block;
+	width: 44px;
+	height: 44px;
+	font-size: 26px;
+	color: #fff;
+	border: 1px solid #fff;
+	cursor: pointer;
+	text-align: center;
+}
+.cart__enumerator-btn:hover {
+	text-decoration: none;
+}
+.cart__enumerator-input::-webkit-input-placeholder {
+	color: #fff;
+}
+.cart__enumerator-input::-moz-placeholder {
+	color: #fff;
+}
+.cart__btn {
+	margin-bottom: 0;
+	vertical-align: top;
+}
+.cart__radio-label {
+	margin-right: 11px;
+	cursor: pointer;
+	text-align: center;
+}
+.cart__radio-number {
+	position: relative;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 700;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	transition: all 0.1s;
+}
+.cart__radio-number_9 {
+	width: 54px;
+	height: 54px;
+}
+.cart__radio-number_12 {
+	width: 62px;
+	height: 62px;
+}
+.cart__radio-number_14 {
+	width: 66px;
+	height: 66px;
+}
+.cart__radio-number_16 {
+	width: 72px;
+	height: 72px;
+}
+.cart__radio-number_18 {
+	width: 78px;
+	height: 78px;
+}
+.cart__radio-inner {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	margin-top: -13px;
+}
+.cart__radio-title {
+	display: block;
+	margin-top: 5px;
+	font-size: 14px;
+	transition: all 0.1s;
+}
+.cart__radio:checked + .cart__radio-label > .cart__radio-number {
+	border-width: 4px;
+}
+
+
+/* Pizza builder */
+
+.pizza-builder__radio-label {
+	margin-right: 18px;
+	cursor: pointer;
+	text-align: center;
+}
+.pizza-builder__radio-number {
+	position: relative;
+	display: inline-block;
+	font-size: 24px;
+	font-weight: 700;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	transition: all 0.1s;
+}
+.pizza-builder__radio-number_9 {
+	width: 77px;
+	height: 77px;
+}
+.pizza-builder__radio-number_12 {
+	width: 88px;
+	height: 88px;
+}
+.pizza-builder__radio-number_14 {
+	width: 95px;
+	height: 95px;
+}
+.pizza-builder__radio-number_16 {
+	width: 104px;
+	height: 104px;
+}
+.pizza-builder__radio-number_18 {
+	width: 113px;
+	height: 113px;
+}
+.pizza-builder__radio-inner {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	margin-top: -20px;
+}
+.pizza-builder__radio-title {
+	display: block;
+	margin-top: 23px;
+	transition: all 0.1s;
+}
+.pizza-builder__radio:checked + .pizza-builder__radio-label > .pizza-builder__radio-number {
+	border-width: 4px;
+}
+.pizza-builder__wrap-check {
+	margin-right: -15px;
+	margin-bottom: -10px;
+	margin-left: -15px;
+}
+.pizza-builder__item {
+	position: relative;
+	display: inline-block;
+	width: 25%;
+	margin-right: -4px;
+	padding-top: 18px;
+	padding-right: 15px;
+	padding-bottom: 23px;
+	padding-left: 15px;
+	color: #fff;
+	vertical-align: top;
+	border: 4px solid transparent;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: all 0.3s;
+	text-align: center;
+}
+.pizza-builder__item:hover {
+	text-decoration: none;
+}
+.pizza-builder__check-name {
+	display: block;
+	margin-top: 30px;
+	margin-bottom: 12px;
+	font: 24px 'Abril Fatface';
+}
+.pizza-builder__check-description {
+	display: block;
+	margin-bottom: 17px;
+	font-size: 14px;
+}
+.pizza-builder__check-price {
+	display: block;
+	margin-bottom: 2px;
+	font: 24px 'Fredericka the Great';
+}
+.pizza-builder__item .icon-check {
+	position: absolute;
+	top: -16px;
+	left: 50%;
+	display: block;
+	width: 40px;
+	height: 40px;
+	margin-left: -20px;
+	padding-top: 5px;
+	font-size: 24px;
+	line-height: 1;
+	color: #fff;
+	border-radius: 50%;
+	opacity: 0;
+	overflow: hidden;
+}
+.pizza-builder__check:checked + .pizza-builder__item > .icon-check {
+	opacity: 1;
+}
+.pizza-builder__item.js-active .icon-check {
+	opacity: 1;
+}
+.pizza-builder__btn-select {
+	display: none;
+	max-width: 85px;
+	margin-bottom: 9px;
+	padding: 4px 20px;
+	vertical-align: top;
+}
+.pizza-builder__item_mod-a {
+	padding-top: 12px;
+}
+.pizza-builder__item_mod-a .pizza-builder__check-img {
+	height: 107px;
+}
+.pizza-builder__item_mod-a:hover,
+.pizza-builder__item_mod-a:focus {
+	outline-style: none;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+.pizza-builder__item_mod-a:hover .pizza-builder__btn-select,
+.pizza-builder__item_mod-a:focus .pizza-builder__btn-select,
+.pizza-builder__item_mod-a:hover .bootstrap-select > .dropdown-toggle,
+.pizza-builder__item_mod-a:focus .bootstrap-select > .dropdown-toggle,
+.pizza-builder__item_mod-b:hover .pizza-builder__btn-select,
+.pizza-builder__item_mod-b:focus .pizza-builder__btn-select,
+.pizza-builder__item_mod-b:hover .bootstrap-select > .dropdown-toggle,
+.pizza-builder__item_mod-b:focus .bootstrap-select > .dropdown-toggle {
+	display: inline-block;
+}
+.pizza-builder__item_mod-a:hover .pizza-builder__check-description_mod-a,
+.pizza-builder__item_mod-a:focus .pizza-builder__check-description_mod-a {
+	display: none;
+}
+.pizza-builder__item_mod-a:hover .pizza-builder__check-price,
+.pizza-builder__item_mod-a:focus .pizza-builder__check-price {
+	margin-bottom: 23px;
+}
+.pizza-builder__item_mod-a .icon-check {
+	top: 4px;
+}
+.pizza-builder__item_mod-a,
+.pizza-builder__item_mod-b {
+	cursor: pointer;
+}
+.pizza-builder__item_mod-a .bootstrap-select > .dropdown-toggle {
+	display: none;
+}
+.pizza-builder__item_mod-b {
+	padding-top: 23px;
+}
+.pizza-builder__item_mod-b .pizza-builder__check-img {
+	height: 239px;
+}
+.pizza-builder__item_mod-b .pizza-builder__btn-select {
+	display: inline-block;
+	opacity: 0;
+}
+.pizza-builder__item_mod-b .pizza-builder__check-price {
+	margin-bottom: 14px;
+}
+.pizza-builder__item_mod-b:hover,
+.pizza-builder__item_mod-b:focus {
+	outline-style: none;
+	background-color: rgba(21, 21, 21, 0.3);
+}
+.pizza-builder__item_mod-b .bootstrap-select > .dropdown-toggle {
+	opacity: 0;
+	transition: all .3s;
+}
+.pizza-builder__item_mod-b:hover .bootstrap-select > .dropdown-toggle,
+.pizza-builder__item_mod-b:focus .bootstrap-select > .dropdown-toggle,
+.pizza-builder__item_mod-b:hover .pizza-builder__btn-select,
+.pizza-builder__item_mod-b:focus .pizza-builder__btn-select {
+	opacity: 1;
+}
+.pizza-builder__item_mod-b .pizza-builder__btn-select,
+.pizza-builder__item_mod-b .ui-select {
+	margin-top: 10px;
+	margin-bottom: 6px;
+}
+.pizza-builder__item_mod-c {
+	margin-top: 15px;
+}
+.pizza-builder__item_mod-c .pizza-builder__check-name {
+	margin-top: 15px;
+}
+.pizza-builder__item_mod-c .pizza-builder__check-img {
+	height: 258px;
+}
+.pizza-builder__item_mod-c .pizza-builder__check-price {
+	margin-top: 30px;
+}
+
+.enumerator {
+	white-space: nowrap;
+}
+.enumerator__btn {
+	font-size: 14px;
+	color: #383838;
+	cursor: pointer;
+}
+.enumerator__btn:hover {
+	text-decoration: none;
+}
+.enumerator__title {
+	margin-left: 15px;
+}
+.enumerator__input {
+	display: inline-block;
+	width: 30px;
+	border: none;
+	background-color: transparent;
+}
+
+.table-order {
+	width: 100%;
+	margin-top: 25px;
+	font-size: 14px;
+}
+.table-order__title {
+	margin-bottom: 0;
+}
+.table-order > thead > tr > th {
+	padding-bottom: 25px;
+	border-bottom: 1px solid #383838;
+	box-shadow: 0 2px 0 0 rgba(1, 2, 2, 0.55);
+}
+.table-order > thead > tr > th:first-child {
+	width: 220px;
+}
+.table-order > tbody > tr:first-child > td {
+	padding-top: 22px;
+}
+.table-order > tbody > tr > td:last-child {
+	padding-left: 10px;
+}
+.table-order tr > td {
+	padding-top: 14px;
+}
+.table-order .icon-close {
+	float: right;
+	padding-top: 3px;
+	cursor: pointer;
+}
+.table-order tr > .table-order__total {
+	padding-top: 23px;
+	padding-bottom: 25px;
+	font: 24px ''Fredericka the Great'';
+}
+.table-order tr > .table-order__base {
+	padding-top: 20px;
+	padding-bottom: 15px;
+}
+.table-order__btn {
+	display: block;
+	padding-right: 0;
+	padding-left: 0;
+	text-align: center;
+}
+.border-cell {
+	padding-bottom: 22px;
+	border-bottom: 1px solid #383838;
+	box-shadow: 0 2px 0 0 rgba(1, 2, 2, 0.55);
+}
+
+.table-cart-order > thead > tr > th {
+	padding-bottom: 29px;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+.table-cart-order > tbody > tr > td {
+	padding-top: 25px;
+	padding-bottom: 21px;
+	vertical-align: middle;
+}
+.table-cart-order__name {
+	display: block;
+	font: 24px 'Abril Fatface';
+}
+.table-cart-order__price {
+	font: 24px 'Fredericka the Great';
+}
+.table-cart-order__number {
+	display: block;
+	width: 44px;
+	height: 44px;
+	padding-top: 9px;
+	font-size: 16px;
+	border: 1px solid #fff;
+	text-align: center;
+}
+.table-cart-order .icon-close {
+	display: inline-block;
+	margin-right: 50px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+.table-cart-order__img {
+	display: inline-block;
+}
+
+.table-totals {
+	width: 100%;
+	margin-top: 28px;
+	font-size: 14px;
+}
+.table-totals__title {
+	margin-bottom: 0;
+}
+.table-totals tr > td:first-child {
+	padding-right: 15px;
+}
+.table-totals tr > td {
+	padding-bottom: 20px;
+}
+.table-totals__total {
+	padding-top: 23px;
+	padding-bottom: 25px;
+	font: 24px 'Fredericka the Great';
+}
+.table-totals__btn {
+	display: block;
+	margin-top: 10px;
+	padding-right: 0;
+	padding-left: 0;
+	text-align: center;
+}
+.table-totals .border-cell {
+	padding-bottom: 30px;
+}
+
+.checkout-top-line {
+	padding-top: 38px;
+	padding-bottom: 35px;
+	font-weight: 700;
+	border-bottom-width: 4px;
+	border-bottom-style: solid;
+}
+
+.recipe {
+	padding-top: 32px;
+	padding-bottom: 25px;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+.recipe > .recipe__item {
+	display: block;
+	margin-bottom: 12px;
+	padding-left: 45px;
+}
+.recipe > .recipe__item:before {
+	content: none;
+}
+
+.foto-link {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding-right: 35px;
+	padding-left: 35px;
+}
+.foto-link:before {
+	position: absolute;
+	top: 30px;
+	bottom: 30px;
+	left: 0;
+	display: block;
+	width: 100%;
+	border: 4px solid #000;
+	z-index: -1;
+	content: '';
+}
+.foto-link__inner {
+	position: relative;
+}
+
+.map {
+	margin-bottom: 70px;
+	padding: 31px;
+	border-width: 4px;
+	border-style: solid;
+}
+
+.contact-block {
+	margin-bottom: 55px;
+}
+.contact-block__inner {
+	margin-bottom: 5px;
+}
+.contact-block__title {
+	margin-bottom: 24px;
+}
+.contact-block__info {
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+
+
+/* ======= SLIDERS ======= */
+
+
+/* MAIN SLIDER */
+
+.main-slider {
+	box-shadow: 0 1px 7px 0 rgba(1, 2, 2, 0.6);
+	z-index: 1;
+}
+.main-slider__title {
+	font: 72px 'Fredericka the Great';
+}
+.main-slider__text {
+	width: 45%;
+	font: 36px/1.277 'Abril Fatface';
+}
+.main-slider .ui-btn {
+	margin-top: 37px;
+}
+
+
+/* OTHER SLIDERS */
+
+.slider-goods.owl-carousel {
+	margin-top: -60px;
+	margin-bottom: -60px;
+}
+.slider-type-a {
+	position: relative;
+}
+.slider-type-a__item {
+	padding-right: 70px;
+	padding-left: 85px;
+}
+.slider-type-a__img {
+	float: right;
+}
+.slider-type-a__inner {
+	margin-right: 620px;
+	padding-top: 120px;
+}
+.slider-type-a__name {
+	margin-top: 33px;
+	font-family: 'Abril Fatface';
+	font-size: 48px;
+}
+.slider-type-a__price {
+	margin-top: 5px;
+	margin-bottom: 14px;
+	font-family: 'Fredericka the Great';
+	font-size: 36px;
+	color: #000;
+}
+.slider-type-a__description {
+	margin-bottom: 28px;
+	line-height: 1.7;
+}
+
+.slider-type-b__name {
+	margin-top: 54px;
+	margin-bottom: 22px;
+	font-family: 'Abril Fatface';
+	font-size: 48px;
+}
+.slider-type-b__description {
+	margin-bottom: 30px;
+	line-height: 1.7;
+}
+
+.slider-reviews {
+	margin-top: 40px;
+}
+.slider-reviews__item {
+	margin-bottom: 140px;
+	padding-right: 16px;
+	padding-left: 15px;
+	text-align: center;
+}
+.slider-reviews__img {
+	height: 176px;
+}
+.slider-reviews__inner {
+	margin-top: 27px;
+	padding-bottom: 30px;
+	border-width: 4px;
+	border-style: solid;
+	border-top: none;
+}
+.slider-reviews__title {
+	margin-bottom: 8px;
+	font: 400 24px 'Abril Fatface';
+}
+.slider-reviews__quote {
+	padding-right: 25px;
+	padding-left: 25px;
+	font: 24px/1.3 'Fredericka the Great';
+}
+.slider-reviews__autor {
+	display: block;
+	margin-top: 25px;
+	font-style: normal;
+}
+.slider-reviews__link {
+	display: block;
+	font-weight: 700;
+}
+
+.slider-cart {
+	margin-bottom: 106px;
+}
+
+.carusel-nav {
+	margin-top: 95px;
+	padding-right: 70px;
+	padding-left: 70px;
+	font-size: 14px;
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
+}
+.carusel-nav .icon {
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+
+/* Modifications */
+
+.slider_mod-a.owl-theme .owl-controls .owl-buttons div {
+	color: #fff;
+	border-color: #fff;
+}
+
+.slider_mod-b.owl-carousel .owl-item {
+	padding-top: 30px;
+}
+.slider_mod-b.owl-theme .owl-controls {
+	top: auto;
+	bottom: 0;
+}
+.slider_mod-b.owl-theme .owl-controls .owl-buttons div {
+	position: relative;
+	right: auto;
+	left: auto;
+	display: inline-block;
+	margin-right: 14px;
+	margin-left: 14px;
+}
+.slider_mod-b.owl-theme .owl-controls .owl-buttons div:hover {
+	color: #fff;
+}
+
+.slider_mod-c.owl-theme .owl-controls {
+	top: auto;
+	margin-top: 74px;
+}
+.slider_mod-c.owl-theme .owl-controls .owl-buttons {
+	position: relative;
+	max-width: 1170px;
+	height: 60px;
+	margin-right: auto;
+	margin-left: auto;
+	border-top-width: 4px;
+	border-top-style: solid;
+	border-bottom-width: 4px;
+	border-bottom-style: solid;
+}
+.slider_mod-c.owl-theme .owl-controls .owl-buttons div {
+	z-index: 100;
+}
+.slider_mod-c.owl-theme .owl-controls .owl-buttons .owl-prev {
+	top: -4px;
+	left: 0;
+}
+.slider_mod-c.owl-theme .owl-controls .owl-buttons .owl-next {
+	top: -4px;
+	right: 0;
+}
+
+.slider_mod-d.owl-theme .owl-controls {
+	top: -51px;
+}
+.slider_mod-d.owl-theme .owl-controls .owl-buttons .owl-prev {
+	right: 70px;
+	left: auto;
+}
+.slider_mod-d.owl-theme .owl-controls .owl-buttons .owl-next {
+	right: 0;
+}
+
+

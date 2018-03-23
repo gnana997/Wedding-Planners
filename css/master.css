@@ -1,0 +1,45 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:	Margherita
+Version:	1.0
+Assigned to:	WebNik
+Primary use:	Margherita
+-------------------------------------------------------------------*/
+
+
+/* FONTS*/
+
+@import url(https://fonts.googleapis.com/css?family=Fredericka+the+Great|Abril+Fatface|Josefin+Sans:400,700);
+@import url('../fonts/font-awesome/css/font-awesome.min.css');
+@import url('../fonts/Icon-font-7-stroke/assets/Pe-icon-7-stroke.css');
+
+
+
+/* PLUGIN CSS */
+
+@import url('preloader.css');
+@import url('../plugins/bootstrap/css/bootstrap.css');                           /* bootstrap */
+@import url('../plugins/slidebars/dist/slidebars.css');                          /* sidebar */
+@import url('../plugins/slider-pro/dist/css/slider-pro.css');                    /* main slider */
+@import url('../plugins/owl-carousel/owl.carousel.css');                         /* other sliders */
+@import url('../plugins/owl-carousel/owl.transitions.css');                      /* other sliders */
+@import url('../plugins/owl-carousel/owl.theme.css');                            /* other sliders */
+@import url('../plugins/prettyphoto/css/prettyPhoto.css');                       /* modal */
+@import url('../plugins/bootstrap-select/dist/css/bootstrap-select.css');        /* select customization */
+@import url('../plugins/datetimepicker/jquery.datetimepicker.css');              /* date select */
+@import url('../plugins/animate/animate.css');                                   /* animations */
+
+
+
+
+/* MAIN CSS */
+
+@import url('theme.css');
+@import url('sections.css');
+@import url('sidebar.css');
+@import url('blog.css');
+@import url('responsive.css');
+@import url('color.css');
+/*@import url('debugging.css');*/
+
